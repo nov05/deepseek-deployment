@@ -1,0 +1,729 @@
+timestamp,message
+1738630007702,"│ │             ""num_attention_heads"": 40,                                   │ │"
+1738630007702,"│ │             ""num_hidden_layers"": 64,                                     │ │"
+1738630007702,"│ │             ""num_key_value_heads"": 8,                                    │ │"
+1738630007702,"│ │             ""quantize"": null,                                            │ │"
+1738630007702,"│ │             ""rms_norm_eps"": 1e-05,                                       │ │"
+1738630007702,"│ │             ""rope_scaling"": null,                                        │ │"
+1738630007702,"│ │             ""rope_theta"": 1000000.0,                                     │ │"
+1738630007702,"│ │             ""sliding_window"": null,                                      │ │"
+1738630007702,"│ │             ""speculator"": null,                                          │ │"
+1738630007702,"│ │             ""tie_word_embeddings"": false,                                │ │"
+1738630007702,"│ │             ""torch_dtype"": ""bfloat16"",                                   │ │"
+1738630007702,"│ │             ""transformers_version"": ""4.46.3"",                            │ │"
+1738630007702,"│ │             ""use_cache"": true,                                           │ │"
+1738630007702,"│ │             ""use_sliding_window"": false,                                 │ │"
+1738630007702,"│ │             ""vocab_size"": 152064                                         │ │"
+1738630007702,│ │           }                                                              │ │
+1738630007702,│ │  prefix = 'model.layers.23.mlp'                                          │ │
+1738630007702,│ │    self = Qwen2MLP(                                                      │ │
+1738630007702,│ │             (act): SiLU()                                                │ │
+1738630007702,│ │             (gate_up_proj): TensorParallelColumnLinear(                  │ │
+1738630007702,│ │           │   (linear): FastLinear()                                     │ │
+1738630007702,│ │             )                                                            │ │
+1738630007702,│ │           )                                                              │ │
+1738630007702,│ │ weights = <text_generation_server.utils.weights.Weights object at        │ │
+1738630007702,│ │           0x7efb31893150>                                                │ │
+1738630007702,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630007702,│                                                                              │
+1738630007702,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/layers/tensor │
+1738630007702,│ _parallel.py:190 in load                                                     │
+1738630007702,│                                                                              │
+1738630007702,│   187 │                                                                      │
+1738630007702,│   188 │   @classmethod                                                       │
+1738630007702,"│   189 │   def load(cls, config, prefix: str, weights, bias: bool):           │"
+1738630007702,│ ❱ 190 │   │   weight = weights.get_weights_row(prefix)                       │
+1738630007702,│   191 │   │                                                                  │
+1738630007702,│   192 │   │   if bias and weights.process_group.rank() == 0:                 │
+1738630007702,│   193 │   │   │   # Rank is only on the first rank process                   │
+1738630007702,│                                                                              │
+1738630007702,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630007702,│ │    bias = False                                                          │ │
+1738630007702,│ │  config = Qwen2Config {                                                  │ │
+1738630007702,"│ │             ""_name_or_path"": ""deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"", │ │"
+1738630007702,"│ │             ""architectures"": [                                           │ │"
+1738630007702,"│ │           │   ""Qwen2ForCausalLM""                                         │ │"
+1738630007702,"│ │             ],                                                           │ │"
+1738630007702,"│ │             ""attention_dropout"": 0.0,                                    │ │"
+1738630007702,"│ │             ""bos_token_id"": 151643,                                      │ │"
+1738630007702,"│ │             ""eos_token_id"": 151643,                                      │ │"
+1738630007702,"│ │             ""hidden_act"": ""silu"",                                        │ │"
+1738630007702,"│ │             ""hidden_size"": 5120,                                         │ │"
+1738630007702,"│ │             ""initializer_range"": 0.02,                                   │ │"
+1738630007702,"│ │             ""intermediate_size"": 27648,                                  │ │"
+1738630007703,"│ │             ""max_position_embeddings"": 131072,                           │ │"
+1738630007703,"│ │             ""max_window_layers"": 64,                                     │ │"
+1738630007703,"│ │             ""model_type"": ""qwen2"",                                       │ │"
+1738630007703,"│ │             ""num_attention_heads"": 40,                                   │ │"
+1738630007703,"│ │             ""num_hidden_layers"": 64,                                     │ │"
+1738630007703,"│ │             ""num_key_value_heads"": 8,                                    │ │"
+1738630007703,"│ │             ""quantize"": null,                                            │ │"
+1738630007703,"│ │             ""rms_norm_eps"": 1e-05,                                       │ │"
+1738630007703,"│ │             ""rope_scaling"": null,                                        │ │"
+1738630007703,"│ │             ""rope_theta"": 1000000.0,                                     │ │"
+1738630007703,"│ │             ""sliding_window"": null,                                      │ │"
+1738630007703,"│ │             ""speculator"": null,                                          │ │"
+1738630007703,"│ │             ""tie_word_embeddings"": false,                                │ │"
+1738630007703,"│ │             ""torch_dtype"": ""bfloat16"",                                   │ │"
+1738630007703,"│ │             ""transformers_version"": ""4.46.3"",                            │ │"
+1738630007703,"│ │             ""use_cache"": true,                                           │ │"
+1738630007703,"│ │             ""use_sliding_window"": false,                                 │ │"
+1738630007703,"│ │             ""vocab_size"": 152064                                         │ │"
+1738630007703,│ │           }                                                              │ │
+1738630007703,│ │  prefix = 'model.layers.23.mlp.down_proj'                                │ │
+1738630007703,│ │ weights = <text_generation_server.utils.weights.Weights object at        │ │
+1738630007703,│ │           0x7efb31893150>                                                │ │
+1738630007703,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630007703,│                                                                              │
+1738630007703,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/utils/weights │
+1738630007703,│ .py:396 in get_weights_row                                                   │
+1738630007703,│                                                                              │
+1738630007703,│   393 │   │   return tensor                                                  │
+1738630007703,│   394 │                                                                      │
+1738630007703,"│   395 │   def get_weights_row(self, prefix: str):                            │"
+1738630007703,"│ ❱ 396 │   │   return self.weights_loader.get_weights_row(self, prefix)       │"
+1738630007703,│   397 │                                                                      │
+1738630007703,│   398 │   @contextmanager                                                    │
+1738630007703,"│   399 │   def use_loader(self, weights_loader: WeightsLoader):               │"
+1738630007703,│                                                                              │
+1738630007703,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630007703,│ │ prefix = 'model.layers.23.mlp.down_proj'                                 │ │
+1738630007703,│ │   self = <text_generation_server.utils.weights.Weights object at         │ │
+1738630007703,│ │          0x7efb31893150>                                                 │ │
+1738630007703,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630007703,│                                                                              │
+1738630007703,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/layers/fp8.py │
+1738630007703,│ :259 in get_weights_row                                                      │
+1738630007703,│                                                                              │
+1738630007703,│   256 │   │   return UnquantizedWeight(w)                                    │
+1738630007703,│   257 │                                                                      │
+1738630007703,"│   258 │   def get_weights_row(self, weights: ""Weights"", prefix: str):        │"
+1738630007703,"│ ❱ 259 │   │   w = weights.get_sharded(f""{prefix}.weight"", dim=1)             │"
+1738630007703,│   260 │   │   # FP8 branch                                                   │
+1738630007703,│   261 │   │   if w.dtype == torch.float8_e4m3fn:                             │
+1738630007703,│   262 │   │   │   scale = (                                                  │
+1738630007703,│                                                                              │
+1738630007703,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630007703,│ │  prefix = 'model.layers.23.mlp.down_proj'                                │ │
+1738630007703,│ │    self = <text_generation_server.layers.fp8.HybridFP8UnquantLoader      │ │
+1738630007703,│ │           object at 0x7efb99c07e50>                                      │ │
+1738630007703,│ │ weights = <text_generation_server.utils.weights.Weights object at        │ │
+1738630007703,│ │           0x7efb31893150>                                                │ │
+1738630007703,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630007703,│                                                                              │
+1738630007703,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/utils/weights │
+1738630007703,│ .py:277 in get_sharded                                                       │
+1738630007703,│                                                                              │
+1738630007703,│   274 │   │   assert (                                                       │
+1738630007703,│   275 │   │   │   size % world_size == 0                                     │
+1738630007703,"│   276 │   │   ), f""The choosen size {size} is not compatible with sharding o │"
+1738630007703,│ ❱ 277 │   │   return self.get_partial_sharded(                               │
+1738630007703,"│   278 │   │   │   tensor_name, dim, to_device=to_device, to_dtype=to_dtype   │"
+1738630007703,│   279 │   │   )                                                              │
+1738630007703,│   280                                                                        │
+1738630007703,│                                                                              │
+1738630007703,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630007703,│ │         dim = 1                                                          │ │
+1738630007703,│ │           f = <builtins.safe_open object at 0x7efb2a2ef870>              │ │
+1738630007703,│ │    filename = '/tmp/hub/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-3… │ │
+1738630007703,│ │        self = <text_generation_server.utils.weights.Weights object at    │ │
+1738630007703,│ │               0x7efb31893150>                                            │ │
+1738630007703,│ │        size = 27648                                                      │ │
+1738630007703,│ │      slice_ = <builtins.PySafeSlice object at 0x7efb2a35b520>            │ │
+1738630007703,│ │ tensor_name = 'model.layers.23.mlp.down_proj.weight'                     │ │
+1738630007703,│ │   to_device = True                                                       │ │
+1738630007703,│ │    to_dtype = True                                                       │ │
+1738630007703,│ │  world_size = 1                                                          │ │
+1738630007703,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630007703,│                                                                              │
+1738630007703,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/utils/weights │
+1738630007703,│ .py:265 in get_partial_sharded                                               │
+1738630007703,│                                                                              │
+1738630007703,│   262 │   │   ):                                                             │
+1738630007703,│   263 │   │   │   tensor = tensor.to(dtype=self.dtype)                       │
+1738630007703,│   264 │   │   if to_device:                                                  │
+1738630007703,│ ❱ 265 │   │   │   tensor = tensor.to(device=self.device)                     │
+1738630007703,│   266 │   │   return tensor                                                  │
+1738630007703,│   267 │                                                                      │
+1738630007703,"│   268 │   def get_sharded(self, tensor_name: str, dim: int, to_device=True,  │"
+1738630007703,│                                                                              │
+1738630007703,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630007703,│ │  block_size = 27648                                                      │ │
+1738630007703,│ │         dim = 1                                                          │ │
+1738630007703,│ │           f = <builtins.safe_open object at 0x7efb2a2ef870>              │ │
+1738630007703,│ │    filename = '/tmp/hub/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-3… │ │
+1738630007703,│ │        rank = 0                                                          │ │
+1738630007703,│ │        self = <text_generation_server.utils.weights.Weights object at    │ │
+1738630007703,│ │               0x7efb31893150>                                            │ │
+1738630007703,│ │        size = 27648                                                      │ │
+1738630007703,│ │      slice_ = <builtins.PySafeSlice object at 0x7efb2a35b590>            │ │
+1738630007703,│ │       start = 0                                                          │ │
+1738630007703,│ │        stop = 27648                                                      │ │
+1738630007703,"│ │      tensor = tensor([[ 0.0114, -0.0197,  0.0020,  ..., -0.0095,         │ │"
+1738630007703,"│ │               0.0264, -0.0217],                                          │ │"
+1738630007703,"│ │               │   │   [ 0.0255, -0.0645,  0.0312,  ..., -0.0532,         │ │"
+1738630007703,"│ │               0.0388, -0.0146],                                          │ │"
+1738630007703,"│ │               │   │   [-0.0110,  0.0133,  0.0092,  ...,  0.0026,         │ │"
+1738630007703,"│ │               0.0261, -0.0061],                                          │ │"
+1738630007703,"│ │               │   │   ...,                                               │ │"
+1738630007703,"│ │               │   │   [ 0.0096, -0.0177,  0.0046,  ...,  0.0105,         │ │"
+1738630007703,"│ │               -0.0049, -0.0043],                                         │ │"
+1738630007703,"│ │               │   │   [-0.0193,  0.0332, -0.0104,  ..., -0.0219,         │ │"
+1738630007703,"│ │               0.0030,  0.0125],                                          │ │"
+1738630007703,"│ │               │   │   [-0.0664, -0.0762, -0.0061,  ...,  0.0038,         │ │"
+1738630007703,"│ │               -0.0347, -0.0033]],                                        │ │"
+1738630007703,│ │               │      dtype=torch.float16)                                │ │
+1738630007703,│ │ tensor_name = 'model.layers.23.mlp.down_proj.weight'                     │ │
+1738630007703,│ │   to_device = True                                                       │ │
+1738630007703,│ │    to_dtype = True                                                       │ │
+1738630007703,│ │  world_size = 1                                                          │ │
+1738630007703,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630007703,╰──────────────────────────────────────────────────────────────────────────────╯
+1738630007703,OutOfMemoryError: CUDA out of memory. Tried to allocate 270.00 MiB. GPU 0 has a 
+1738630007703,total capacity of 21.96 GiB of which 217.12 MiB is free. Process 599 has 21.74 
+1738630007703,"GiB memory in use. Of the allocated memory 21.53 GiB is allocated by PyTorch, "
+1738630007703,and 1.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated
+1738630007703,memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to 
+1738630007703,avoid fragmentation.  See documentation for Memory Management  
+1738630007703,(https://pytorch.org/docs/stable/notes/cuda.html#environment-variables) #033[2m#033[3mrank#033[0m#033[2m=#033[0m0#033[0m
+1738630007703,#033[2m2025-02-04T00:46:47.646995Z#033[0m #033[31mERROR#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Shard 0 failed to start
+1738630007703,Error: ShardCannotStart
+1738630008203,#033[2m2025-02-04T00:46:47.647037Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Shutting down shards
+1738630008203,"#033[2m2025-02-04T00:46:48.110105Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Args {
+    model_id: ""deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"",
+    revision: None,
+    validation_workers: 2,
+    sharded: None,
+    num_shard: None,
+    quantize: None,
+    speculate: None,
+    dtype: None,
+    kv_cache_dtype: None,
+    trust_remote_code: false,
+    max_concurrent_requests: 128,
+    max_best_of: 2,
+    max_stop_sequences: 4,
+    max_top_n_tokens: 5,
+    max_input_tokens: Some(
+        3686,
+    ),
+    max_input_length: None,
+    max_total_tokens: Some(
+        4096,
+    ),
+    waiting_served_ratio: 0.3,
+    max_batch_prefill_tokens: None,
+    max_batch_total_tokens: None,
+    max_waiting_tokens: 20,
+    max_batch_size: Some(
+        8,
+    ),
+    cuda_graphs: None,
+    hostname: ""container-0.local"",
+    port: 8080,
+    shard_uds_path: ""/tmp/text-generation-server"",
+    master_addr: ""localhost"",
+    master_port: 29500,
+    huggingface_hub_cache: None,
+    weights_cache_override: None,
+    disable_custom_kernels: false,
+    cuda_memory_fraction: 1.0,
+    rope_scaling: None,
+    rope_factor: None,
+    json_output: false,
+    otlp_endpoint: None,
+    otlp_service_name: ""text-generation-inference.router"",
+    cors_allow_origin: [],
+    api_key: None,
+    watermark_gamma: None,
+    watermark_delta: None,
+    ngrok: false,
+    ngrok_authtoken: None,
+    ngrok_edge: None,
+    tokenizer_config_path: None,
+    disable_grammar_support: false,
+    env: false,
+    max_client_batch_size: 4,
+    lora_adapters: None,
+    usage_stats: On,
+    payload_limit: 2000000,
+    enable_prefill_logprobs: false,"
+1738630008203,}
+1738630009457,"#033[2m2025-02-04T00:46:48.110155Z#033[0m #033[32m INFO#033[0m #033[2mhf_hub#033[0m#033[2m:#033[0m Token file not found ""/tmp/token""    "
+1738630009457,#033[2m2025-02-04T00:46:49.364283Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Using attention flashinfer - Prefix caching true
+1738630009457,#033[2m2025-02-04T00:46:49.393373Z#033[0m #033[33m WARN#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Not enough VRAM to run the model: Available: 22.95GB - Model 60.83GB.
+1738630009457,#033[2m2025-02-04T00:46:49.393394Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Default `max_batch_prefill_tokens` to 1839
+1738630009457,"#033[2m2025-02-04T00:46:49.393398Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Using default cuda graphs [1, 2, 4, 8, 16, 32]"
+1738630012215,#033[2m2025-02-04T00:46:49.393524Z#033[0m #033[32m INFO#033[0m #033[1mdownload#033[0m: #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Starting check and download process for deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+1738630012716,#033[2m2025-02-04T00:46:52.043311Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Files are already present on the host. Skipping download.
+1738630012716,#033[2m2025-02-04T00:46:52.510847Z#033[0m #033[32m INFO#033[0m #033[1mdownload#033[0m: #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Successfully downloaded weights for deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+1738630015223,#033[2m2025-02-04T00:46:52.511110Z#033[0m #033[32m INFO#033[0m #033[1mshard-manager#033[0m: #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Starting shard #033[2m#033[3mrank#033[0m#033[2m=#033[0m0#033[0m
+1738630015223,#033[2m2025-02-04T00:46:55.198938Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Using prefix caching = True
+1738630019997,#033[2m2025-02-04T00:46:55.198996Z#033[0m #033[32m INFO#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Using Attention = flashinfer
+1738630026997,#033[2m2025-02-04T00:47:02.534782Z#033[0m #033[32m INFO#033[0m #033[1mshard-manager#033[0m: #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Waiting for shard to be ready... #033[2m#033[3mrank#033[0m#033[2m=#033[0m0#033[0m
+1738630036996,#033[2m2025-02-04T00:47:12.544430Z#033[0m #033[32m INFO#033[0m #033[1mshard-manager#033[0m: #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Waiting for shard to be ready... #033[2m#033[3mrank#033[0m#033[2m=#033[0m0#033[0m
+1738630038027,#033[2m2025-02-04T00:47:17.884532Z#033[0m #033[31mERROR#033[0m #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Error when initializing model
+1738630038027,"Traceback (most recent call last):
+  File ""/opt/conda/bin/text-generation-server"", line 8, in <module>
+    sys.exit(app())
+  File ""/opt/conda/lib/python3.11/site-packages/typer/main.py"", line 321, in __call__
+    return get_command(self)(*args, **kwargs)
+  File ""/opt/conda/lib/python3.11/site-packages/click/core.py"", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File ""/opt/conda/lib/python3.11/site-packages/typer/core.py"", line 728, in main
+    return _main(
+  File ""/opt/conda/lib/python3.11/site-packages/typer/core.py"", line 197, in _main
+    rv = self.invoke(ctx)
+  File ""/opt/conda/lib/python3.11/site-packages/click/core.py"", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File ""/opt/conda/lib/python3.11/site-packages/click/core.py"", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File ""/opt/conda/lib/python3.11/site-packages/click/core.py"", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File ""/opt/conda/lib/python3.11/site-packages/typer/main.py"", line 703, in wrapper
+    return callback(**use_params)
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/cli.py"", line 117, in serve
+    server.serve(
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/server.py"", line 315, in serve
+    asyncio.run(
+  File ""/opt/conda/lib/python3.11/asyncio/runners.py"", line 190, in run
+    return runner.run(main)
+  File ""/opt/conda/lib/python3.11/asyncio/runners.py"", line 118, in run
+    return self._loop.run_until_complete(task)
+  File ""/opt/conda/lib/python3.11/asyncio/base_events.py"", line 641, in run_until_complete
+    self.run_forever()
+  File ""/opt/conda/lib/python3.11/asyncio/base_events.py"", line 608, in run_forever
+    self._run_once()
+  File ""/opt/conda/lib/python3.11/asyncio/base_events.py"", line 1936, in _run_once
+    handle._run()
+  File ""/opt/conda/lib/python3.11/asyncio/events.py"", line 84, in _run
+    self._context.run(self._callback, *self._args)"
+1738630038027,"> File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/server.py"", line 268, in serve_inner
+    model = get_model_with_lora_adapters(
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/__init__.py"", line 1363, in get_model_with_lora_adapters
+    model = get_model(
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/__init__.py"", line 1148, in get_model
+    return FlashCausalLM(
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/flash_causal_lm.py"", line 1292, in __init__
+    model = model_class(prefix, config, weights)
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/custom_modeling/flash_qwen2_modeling.py"", line 359, in __init__
+    self.model = Qwen2Model(prefix, config, weights)
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/custom_modeling/flash_qwen2_modeling.py"", line 290, in __init__
+    [
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/custom_modeling/flash_qwen2_modeling.py"", line 291, in <listcomp>
+    Qwen2Layer(
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/custom_modeling/flash_qwen2_modeling.py"", line 230, in __init__
+    self.mlp = Qwen2MLP(prefix=f""{prefix}.mlp"", config=config, weights=weights)
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/models/custom_modeling/flash_qwen2_modeling.py"", line 207, in __init__
+    self.down_proj = TensorParallelRowLinear.load(
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/layers/tensor_parallel.py"", line 190, in load
+    weight = weights.get_weights_row(prefix)
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/utils/weights.py"", line 396, in get_weights_row
+    return self.weights_loader.get_weights_row(self, prefix)
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/layers/fp8.py"", line 259, in get_weights_row
+    w = weights.get_sharded(f""{prefix}.weight"", dim=1)
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/utils/weights.py"", line 277, in get_sharded
+    return self.get_partial_sharded(
+  File ""/opt/conda/lib/python3.11/site-packages/text_generation_server/utils/weights.py"", line 265, in get_partial_sharded
+    tensor = tensor.to(device=self.device)"
+1738630040282,"torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 270.00 MiB. GPU 0 has a total capacity of 21.96 GiB of which 217.12 MiB is free. Process 1297 has 21.74 GiB memory in use. Of the allocated memory 21.53 GiB is allocated by PyTorch, and 1.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+1738630040282,#033[2m2025-02-04T00:47:20.252187Z#033[0m #033[31mERROR#033[0m #033[1mshard-manager#033[0m: #033[2mtext_generation_launcher#033[0m#033[2m:#033[0m Shard complete standard error output:
+1738630040282,2025-02-04 00:46:53.913 | INFO     | text_generation_server.utils.import_utils:<module>:80 - Detected system cuda
+1738630040282,"/opt/conda/lib/python3.11/site-packages/text_generation_server/layers/gptq/triton.py:242: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float16)"
+1738630040282,"/opt/conda/lib/python3.11/site-packages/mamba_ssm/ops/selective_scan_interface.py:158: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd"
+1738630040282,"/opt/conda/lib/python3.11/site-packages/mamba_ssm/ops/selective_scan_interface.py:231: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  @custom_bwd"
+1738630040282,"/opt/conda/lib/python3.11/site-packages/mamba_ssm/ops/triton/layernorm.py:507: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd"
+1738630040282,"/opt/conda/lib/python3.11/site-packages/mamba_ssm/ops/triton/layernorm.py:566: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  @custom_bwd"
+1738630040282,"/opt/conda/lib/python3.11/site-packages/torch/distributed/c10d_logger.py:79: FutureWarning: You are using a Backend <class 'text_generation_server.utils.dist.FakeGroup'> as a ProcessGroup. This usage is deprecated since PyTorch 2.0. Please use a public API of PyTorch Distributed instead.
+  return func(*args, **kwargs)"
+1738630040282,╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+1738630040282,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/cli.py:117 in │
+1738630040282,│ serve                                                                        │
+1738630040282,│                                                                              │
+1738630040282,│   114 │   │   raise RuntimeError(                                            │
+1738630040282,"│   115 │   │   │   ""Only 1 can be set between `dtype` and `quantize`, as they │"
+1738630040282,│   116 │   │   )                                                              │
+1738630040282,│ ❱ 117 │   server.serve(                                                      │
+1738630040282,"│   118 │   │   model_id,                                                      │"
+1738630040282,"│   119 │   │   lora_adapters,                                                 │"
+1738630040282,"│   120 │   │   revision,                                                      │"
+1738630040282,│                                                                              │
+1738630040282,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630040282,│ │             dtype = None                                                 │ │
+1738630040282,│ │       json_output = True                                                 │ │
+1738630040282,│ │    kv_cache_dtype = None                                                 │ │
+1738630040282,│ │      logger_level = 'INFO'                                               │ │
+1738630040282,│ │     lora_adapters = []                                                   │ │
+1738630040282,│ │  max_input_tokens = 3686                                                 │ │
+1738630040282,│ │          model_id = 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B'           │ │
+1738630040282,│ │     otlp_endpoint = None                                                 │ │
+1738630040282,│ │ otlp_service_name = 'text-generation-inference.router'                   │ │
+1738630040282,│ │          quantize = None                                                 │ │
+1738630040282,│ │          revision = None                                                 │ │
+1738630040283,│ │            server = <module 'text_generation_server.server' from         │ │
+1738630040283,│ │                     '/opt/conda/lib/python3.11/site-packages/text_gener… │ │
+1738630040283,│ │           sharded = False                                                │ │
+1738630040283,│ │         speculate = None                                                 │ │
+1738630040283,│ │ trust_remote_code = False                                                │ │
+1738630040283,│ │          uds_path = PosixPath('/tmp/text-generation-server')             │ │
+1738630040283,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630040283,│                                                                              │
+1738630040283,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/server.py:315 │
+1738630040283,│ in serve                                                                     │
+1738630040283,│                                                                              │
+1738630040283,│   312 │   │   while signal_handler.KEEP_PROCESSING:                          │
+1738630040283,│   313 │   │   │   await asyncio.sleep(0.5)                                   │
+1738630040283,│   314 │                                                                      │
+1738630040283,│ ❱ 315 │   asyncio.run(                                                       │
+1738630040283,│   316 │   │   serve_inner(                                                   │
+1738630040283,"│   317 │   │   │   model_id,                                                  │"
+1738630040283,"│   318 │   │   │   lora_adapters,                                             │"
+1738630040283,│                                                                              │
+1738630040283,│ ╭──────────────────────────── locals ────────────────────────────╮           │
+1738630040283,│ │             dtype = None                                       │           │
+1738630040283,│ │    kv_cache_dtype = None                                       │           │
+1738630040283,│ │     lora_adapters = []                                         │           │
+1738630040283,│ │  max_input_tokens = 3686                                       │           │
+1738630040283,│ │          model_id = 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B' │           │
+1738630040283,│ │          quantize = None                                       │           │
+1738630040283,│ │          revision = None                                       │           │
+1738630040283,│ │           sharded = False                                      │           │
+1738630040283,│ │         speculate = None                                       │           │
+1738630040283,│ │ trust_remote_code = False                                      │           │
+1738630040283,│ │          uds_path = PosixPath('/tmp/text-generation-server')   │           │
+1738630040283,│ ╰────────────────────────────────────────────────────────────────╯           │
+1738630040283,│                                                                              │
+1738630040283,│ /opt/conda/lib/python3.11/asyncio/runners.py:190 in run                      │
+1738630040283,│                                                                              │
+1738630040283,"│   187 │   │   │   ""asyncio.run() cannot be called from a running event loop"" │"
+1738630040283,│   188 │                                                                      │
+1738630040283,│   189 │   with Runner(debug=debug) as runner:                                │
+1738630040283,│ ❱ 190 │   │   return runner.run(main)                                        │
+1738630040283,│   191                                                                        │
+1738630040283,│   192                                                                        │
+1738630040283,│   193 def _cancel_all_tasks(loop):                                           │
+1738630040283,│                                                                              │
+1738630040283,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630040283,│ │  debug = None                                                            │ │
+1738630040283,│ │   main = <coroutine object serve.<locals>.serve_inner at 0x7fd1a19e72e0> │ │
+1738630040283,│ │ runner = <asyncio.runners.Runner object at 0x7fd38c4ab490>               │ │
+1738630040283,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630040283,│                                                                              │
+1738630040283,│ /opt/conda/lib/python3.11/asyncio/runners.py:118 in run                      │
+1738630040283,│                                                                              │
+1738630040283,│   115 │   │                                                                  │
+1738630040283,│   116 │   │   self._interrupt_count = 0                                      │
+1738630040283,│   117 │   │   try:                                                           │
+1738630040283,│ ❱ 118 │   │   │   return self._loop.run_until_complete(task)                 │
+1738630040283,│   119 │   │   except exceptions.CancelledError:                              │
+1738630040283,│   120 │   │   │   if self._interrupt_count > 0:                              │
+1738630040283,"│   121 │   │   │   │   uncancel = getattr(task, ""uncancel"", None)             │"
+1738630040283,│                                                                              │
+1738630040283,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630040283,│ │        context = <_contextvars.Context object at 0x7fd20f553d80>         │ │
+1738630040283,│ │           coro = <coroutine object serve.<locals>.serve_inner at         │ │
+1738630040283,│ │                  0x7fd1a19e72e0>                                         │ │
+1738630040283,│ │           self = <asyncio.runners.Runner object at 0x7fd38c4ab490>       │ │
+1738630040283,│ │ sigint_handler = functools.partial(<bound method Runner._on_sigint of    │ │
+1738630040283,"│ │                  <asyncio.runners.Runner object at 0x7fd38c4ab490>>,     │ │"
+1738630040283,│ │                  main_task=<Task finished name='Task-1'                  │ │
+1738630040283,"│ │                  coro=<serve.<locals>.serve_inner() done, defined at     │ │"
+1738630040283,│ │                  /opt/conda/lib/python3.11/site-packages/text_generatio… │ │
+1738630040283,│ │                  exception=OutOfMemoryError('CUDA out of memory. Tried   │ │
+1738630040283,│ │                  to allocate 270.00 MiB. GPU 0 has a total capacity of   │ │
+1738630040283,│ │                  21.96 GiB of which 217.12 MiB is free. Process 1297 has │ │
+1738630040283,│ │                  21.74 GiB memory in use. Of the allocated memory 21.53  │ │
+1738630040283,"│ │                  GiB is allocated by PyTorch, and 1.19 MiB is reserved   │ │"
+1738630040283,│ │                  by PyTorch but unallocated. If reserved but unallocated │ │
+1738630040283,│ │                  memory is large try setting                             │ │
+1738630040283,│ │                  PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to     │ │
+1738630040283,│ │                  avoid fragmentation.  See documentation for Memory      │ │
+1738630040283,│ │                  Management                                              │ │
+1738630040283,│ │                  (https://pytorch.org/docs/stable/notes/cuda.html#envir… │ │
+1738630040283,│ │           task = <Task finished name='Task-1'                            │ │
+1738630040283,"│ │                  coro=<serve.<locals>.serve_inner() done, defined at     │ │"
+1738630040283,│ │                  /opt/conda/lib/python3.11/site-packages/text_generatio… │ │
+1738630040283,│ │                  exception=OutOfMemoryError('CUDA out of memory. Tried   │ │
+1738630040283,│ │                  to allocate 270.00 MiB. GPU 0 has a total capacity of   │ │
+1738630040283,│ │                  21.96 GiB of which 217.12 MiB is free. Process 1297 has │ │
+1738630040283,│ │                  21.74 GiB memory in use. Of the allocated memory 21.53  │ │
+1738630040283,"│ │                  GiB is allocated by PyTorch, and 1.19 MiB is reserved   │ │"
+1738630040283,│ │                  by PyTorch but unallocated. If reserved but unallocated │ │
+1738630040283,│ │                  memory is large try setting                             │ │
+1738630040283,│ │                  PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to     │ │
+1738630040283,│ │                  avoid fragmentation.  See documentation for Memory      │ │
+1738630040283,│ │                  Management                                              │ │
+1738630040283,│ │                  (https://pytorch.org/docs/stable/notes/cuda.html#envir… │ │
+1738630040283,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630040283,│                                                                              │
+1738630040283,│ /opt/conda/lib/python3.11/asyncio/base_events.py:654 in run_until_complete   │
+1738630040283,│                                                                              │
+1738630040283,│    651 │   │   if not future.done():                                         │
+1738630040283,│    652 │   │   │   raise RuntimeError('Event loop stopped before Future comp │
+1738630040283,│    653 │   │                                                                 │
+1738630040283,│ ❱  654 │   │   return future.result()                                        │
+1738630040283,│    655 │                                                                     │
+1738630040283,│    656 │   def stop(self):                                                   │
+1738630040283,"│    657 │   │   """"""Stop running the event loop.                               │"
+1738630040283,│                                                                              │
+1738630040283,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630040283,│ │   future = <Task finished name='Task-1'                                  │ │
+1738630040283,"│ │            coro=<serve.<locals>.serve_inner() done, defined at           │ │"
+1738630040283,│ │            /opt/conda/lib/python3.11/site-packages/text_generation_serv… │ │
+1738630040283,│ │            exception=OutOfMemoryError('CUDA out of memory. Tried to      │ │
+1738630040283,│ │            allocate 270.00 MiB. GPU 0 has a total capacity of 21.96 GiB  │ │
+1738630040283,│ │            of which 217.12 MiB is free. Process 1297 has 21.74 GiB       │ │
+1738630040283,│ │            memory in use. Of the allocated memory 21.53 GiB is allocated │ │
+1738630040283,"│ │            by PyTorch, and 1.19 MiB is reserved by PyTorch but           │ │"
+1738630040283,│ │            unallocated. If reserved but unallocated memory is large try  │ │
+1738630040283,│ │            setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to   │ │
+1738630040283,│ │            avoid fragmentation.  See documentation for Memory Management │ │
+1738630040283,│ │            (https://pytorch.org/docs/stable/notes/cuda.html#environment… │ │
+1738630040283,│ │ new_task = False                                                         │ │
+1738630040283,│ │     self = <_UnixSelectorEventLoop running=False closed=True             │ │
+1738630040283,│ │            debug=False>                                                  │ │
+1738630040283,│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+1738630040283,│                                                                              │
+1738630040283,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/server.py:268 │
+1738630040283,│ in serve_inner                                                               │
+1738630040283,│                                                                              │
+1738630040283,│   265 │   │   │   server_urls = [local_url]                                  │
+1738630040283,│   266 │   │                                                                  │
+1738630040283,│   267 │   │   try:                                                           │
+1738630040283,│ ❱ 268 │   │   │   model = get_model_with_lora_adapters(                      │
+1738630040283,"│   269 │   │   │   │   model_id,                                              │"
+1738630040283,"│   270 │   │   │   │   lora_adapters,                                         │"
+1738630040283,"│   271 │   │   │   │   revision,                                              │"
+1738630040283,│                                                                              │
+1738630040283,│ ╭───────────────────────────── locals ──────────────────────────────╮        │
+1738630040283,│ │     adapter_to_index = {}                                         │        │
+1738630040283,│ │                dtype = None                                       │        │
+1738630040283,│ │       kv_cache_dtype = None                                       │        │
+1738630040283,│ │            local_url = 'unix:///tmp/text-generation-server-0'     │        │
+1738630040283,│ │        lora_adapters = []                                         │        │
+1738630040283,│ │     max_input_tokens = 3686                                       │        │
+1738630040283,│ │             model_id = 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B' │        │
+1738630040283,│ │             quantize = None                                       │        │
+1738630040283,│ │             revision = None                                       │        │
+1738630040283,│ │          server_urls = ['unix:///tmp/text-generation-server-0']   │        │
+1738630040283,│ │              sharded = False                                      │        │
+1738630040283,│ │            speculate = None                                       │        │
+1738630040283,│ │    trust_remote_code = False                                      │        │
+1738630040283,│ │             uds_path = PosixPath('/tmp/text-generation-server')   │        │
+1738630040283,│ │ unix_socket_template = 'unix://{}-{}'                             │        │
+1738630040283,│ ╰───────────────────────────────────────────────────────────────────╯        │
+1738630040283,│                                                                              │
+1738630040283,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/models/__init │
+1738630040283,│ __.py:1363 in get_model_with_lora_adapters                                   │
+1738630040283,│                                                                              │
+1738630040283,"│   1360 │   adapter_to_index: Dict[str, int],                                 │"
+1738630040283,│   1361 ):                                                                    │
+1738630040283,│   1362 │   lora_adapter_ids = [adapter.id for adapter in lora_adapters]      │
+1738630040283,│ ❱ 1363 │   model = get_model(                                                │
+1738630040283,"│   1364 │   │   model_id,                                                     │"
+1738630040283,"│   1365 │   │   lora_adapter_ids,                                             │"
+1738630040283,"│   1366 │   │   revision,                                                     │"
+1738630040283,│                                                                              │
+1738630040283,│ ╭──────────────────────────── locals ────────────────────────────╮           │
+1738630040283,│ │  adapter_to_index = {}                                         │           │
+1738630040283,│ │             dtype = None                                       │           │
+1738630040283,│ │    kv_cache_dtype = None                                       │           │
+1738630040283,│ │  lora_adapter_ids = []                                         │           │
+1738630040283,│ │     lora_adapters = []                                         │           │
+1738630040283,│ │  max_input_tokens = 3686                                       │           │
+1738630040283,│ │          model_id = 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B' │           │
+1738630040283,│ │          quantize = None                                       │           │
+1738630040283,│ │          revision = None                                       │           │
+1738630040283,│ │           sharded = False                                      │           │
+1738630040283,│ │         speculate = None                                       │           │
+1738630040283,│ │ trust_remote_code = False                                      │           │
+1738630040283,│ ╰────────────────────────────────────────────────────────────────╯           │
+1738630040283,│                                                                              │
+1738630040283,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/models/__init │
+1738630040283,│ __.py:1148 in get_model                                                      │
+1738630040283,│                                                                              │
+1738630040283,│   1145 │                                                                     │
+1738630040283,│   1146 │   if model_type == QWEN2:                                           │
+1738630040283,│   1147 │   │   if FLASH_ATTENTION:                                           │
+1738630040283,│ ❱ 1148 │   │   │   return FlashCausalLM(                                     │
+1738630040283,"│   1149 │   │   │   │   model_id=model_id,                                    │"
+1738630040283,"│   1150 │   │   │   │   model_class=Qwen2ForCausalLM,                         │"
+1738630040283,"│   1151 │   │   │   │   revision=revision,                                    │"
+1738630040283,│                                                                              │
+1738630040283,│ ╭──────────────────────────────── locals ────────────────────────────────╮   │
+1738630040283,│ │                         _ = {}                                         │   │
+1738630040283,│ │ compressed_tensors_config = None                                       │   │
+1738630040283,│ │               config_dict = {                                          │   │
+1738630040283,│ │                             │   'architectures': [                     │   │
+1738630040283,│ │                             │   │   'Qwen2ForCausalLM'                 │   │
+1738630040283,"│ │                             │   ],                                     │   │"
+1738630040283,"│ │                             │   'attention_dropout': 0.0,              │   │"
+1738630040283,"│ │                             │   'bos_token_id': 151643,                │   │"
+1738630040283,"│ │                             │   'eos_token_id': 151643,                │   │"
+1738630040283,"│ │                             │   'hidden_act': 'silu',                  │   │"
+1738630040283,"│ │                             │   'hidden_size': 5120,                   │   │"
+1738630040283,"│ │                             │   'initializer_range': 0.02,             │   │"
+1738630040283,"│ │                             │   'intermediate_size': 27648,            │   │"
+1738630040283,"│ │                             │   'max_position_embeddings': 131072,     │   │"
+1738630040283,"│ │                             │   'max_window_layers': 64,               │   │"
+1738630040283,│ │                             │   ... +14                                │   │
+1738630040283,│ │                             }                                          │   │
+1738630040283,│ │                     dtype = None                                       │   │
+1738630040283,│ │            kv_cache_dtype = None                                       │   │
+1738630040283,│ │           kv_cache_scheme = None                                       │   │
+1738630040283,│ │          lora_adapter_ids = []                                         │   │
+1738630040283,│ │          max_input_tokens = 3686                                       │   │
+1738630040283,│ │                    method = 'n-gram'                                   │   │
+1738630040283,│ │                  model_id = 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B' │   │
+1738630040284,│ │                model_type = 'qwen2'                                    │   │
+1738630040284,│ │      needs_sliding_window = False                                      │   │
+1738630040284,│ │       quantization_config = None                                       │   │
+1738630040284,│ │                  quantize = None                                       │   │
+1738630040284,│ │                  revision = None                                       │   │
+1738630040284,│ │                   sharded = False                                      │   │
+1738630040284,│ │            sliding_window = 131072                                     │   │
+1738630040284,│ │                 speculate = 0                                          │   │
+1738630040284,│ │                speculator = None                                       │   │
+1738630040284,│ │         trust_remote_code = False                                      │   │
+1738630040284,│ │        use_sliding_window = True                                       │   │
+1738630040284,│ ╰────────────────────────────────────────────────────────────────────────╯   │
+1738630040284,│                                                                              │
+1738630040284,│ /opt/conda/lib/python3.11/site-packages/text_generation_server/models/flash_ │
+1738630040284,│ causal_lm.py:1292 in __init__                                                │
+1738630040284,│                                                                              │
+1738630040284,│   1289 │   │   )                                                             │
+1738630040284,│   1290 │   │                                                                 │
+1738630040284,"│   1291 │   │   prefix = """"                                                   │"
+1738630040284,"│ ❱ 1292 │   │   model = model_class(prefix, config, weights)                  │"
+1738630040284,│   1293 │   │   torch.distributed.barrier(group=self.process_group)           │
+1738630040284,│   1294 │   │                                                                 │
+1738630040284,│   1295 │   │   # VLM models define the config we care about in their text_co │
+1738630040284,│                                                                              │
+1738630040284,│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+1738630040284,│ │             aliases = None                                               │ │
+1738630040284,│ │              config = Qwen2Config {                                      │ │
+1738630040284,"│ │                         ""_name_or_path"":                                 │ │"
+1738630040284,"│ │                       ""deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"",        │ │"
+1738630040284,"│ │                         ""architectures"": [                               │ │"
+1738630040284,"│ │                       │   ""Qwen2ForCausalLM""                             │ │"
+1738630040284,"│ │                         ],                                               │ │"
+1738630040284,"│ │                         ""attention_dropout"": 0.0,                        │ │"
+1738630040284,"│ │                         ""bos_token_id"": 151643,                          │ │"
+1738630040284,"│ │                         ""eos_token_id"": 151643,                          │ │"
+1738630040284,"│ │                         ""hidden_act"": ""silu"",                            │ │"
+1738630040284,"│ │                         ""hidden_size"": 5120,                             │ │"
+1738630040284,"│ │                         ""initializer_range"": 0.02,                       │ │"
+1738630040284,"│ │                         ""intermediate_size"": 27648,                      │ │"
+1738630040284,"│ │                         ""max_position_embeddings"": 131072,               │ │"
+1738630040284,"│ │                         ""max_window_layers"": 64,                         │ │"
+1738630040284,"│ │                         ""model_type"": ""qwen2"",                           │ │"
+1738630040284,"│ │                         ""num_attention_heads"": 40,                       │ │"
+1738630040284,"│ │                         ""num_hidden_layers"": 64,                         │ │"
+1738630040284,"│ │                         ""num_key_value_heads"": 8,                        │ │"
+1738630040284,"│ │                         ""quantize"": null,                                │ │"
+1738630040284,"│ │                         ""rms_norm_eps"": 1e-05,                           │ │"
+1738630040284,"│ │                         ""rope_scaling"": null,                            │ │"
+1738630040284,"│ │                         ""rope_theta"": 1000000.0,                         │ │"
+1738630040284,"│ │                         ""sliding_window"": null,                          │ │"
+1738630040284,"│ │                         ""speculator"": null,                              │ │"
+1738630040284,"│ │                         ""tie_word_embeddings"": false,                    │ │"
+1738630040284,"│ │                         ""torch_dtype"": ""bfloat16"",                       │ │"
+1738630040284,"│ │                         ""transformers_version"": ""4.46.3"",                │ │"
+1738630040284,"│ │                         ""use_cache"": true,                               │ │"
+1738630040284,"│ │                         ""use_sliding_window"": false,                     │ │"
+1738630040284,"│ │                         ""vocab_size"": 152064                             │ │"
+1738630040284,│ │                       }                                                  │ │
+1738630040284,│ │       default_dtype = torch.float16                                      │ │
+1738630040284,"│ │              device = device(type='cuda', index=0)                       │ │"
+1738630040284,│ │               dtype = torch.float16                                      │ │
+1738630040284,│ │           filenames = [                                                  │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       │                                                  │ │
+1738630040284,│ │                       PosixPath('/tmp/hub/models--deepseek-ai--DeepSeek… │ │
+1738630040284,│ │                       ]                                                  │ │
+1738630040284,│ │   generation_config = GenerationConfig {                                 │ │
+1738630040284,"│ │                         ""bos_token_id"": 151646,                          │ │"
+1738630040284,"│ │                         ""do_sample"": true,                               │ │"
+1738630040284,"│ │                         ""eos_token_id"": 151643,                          │ │"
+1738630040284,"│ │                         ""temperature"": 0.6,                              │ │"
+1738630040284,"│ │                         ""top_p"": 0.95                                    │ │"
+1738630040284,│ │                       }                                                  │ │
+1738630040284,│ │           head_size = None                                               │ │
+1738630040284,│ │      kv_cache_dtype = None                                               │ │
+1738630040284,│ │    lora_adapter_ids = []                                                 │ │
+1738630040284,│ │            model_id = 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B'         │ │
+1738630040284,│ │        num_kv_heads = None                                               │ │
+1738630040284,│ │              prefix = ''                                                 │ │
+1738630040284,│ │            quantize = None                                               │ │
+1738630040284,│ │                rank = 0                                                  │ │
+1738630040284,│ │            revision = None                                               │ │
+1738630040284,│ │                self = <text_generation_server.models.flash_causal_lm.Fl… │ │
+1738630040284,│ │                       object at 0x7fd1a010f810>                          │ │
+1738630040284,│ │ skip_special_tokens = True                                               │ │
+1738630040284,│ │          speculator = None                                               │ │
+1738630040284,│ │    support_chunking = True                                               │ │
+1738630040284,│ │           tokenizer = LlamaTokenizerFast(name_or_path='deepseek-ai/Deep… │ │
+1738630040284,"│ │                       vocab_size=151643, model_max_length=16384,         │ │"
+1738630040284,"│ │                       is_fast=True, padding_side='left',                 │ │"
+1738630040284,"│ │                       truncation_side='left',                            │ │"
+1738630040284,│ │                       special_tokens={'bos_token':                       │ │
+1738630040284,"│ │                       '<｜begin▁of▁sentence｜>', 'eos_token':            │ │"
+1738630040284,"│ │                       '<｜end▁of▁sentence｜>', 'pad_token':              │ │"
+1738630040284,"│ │                       '<｜end▁of▁sentence｜>'},                          │ │"
+1738630040284,"│ │                       clean_up_tokenization_spaces=False),               │ │"
+1738630040284,│ │                       added_tokens_decoder={                             │ │
+1738630040284,│ │                       │   │   151643:                                    │ │
+1738630040284,"│ │                       AddedToken(""<｜end▁of▁sentence｜>"", rstrip=False,  │ │"
+1738630040284,"│ │                       lstrip=False, single_word=False, normalized=False, │ │"
+1738630040284,"│ │                       special=True),                                     │ │"
+1738630040284,"│ │                       │   │   151644: AddedToken(""<｜User｜>"",           │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=False),                  │ │"
+1738630040284,"│ │                       │   │   151645: AddedToken(""<｜Assistant｜>"",      │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=False),                  │ │"
+1738630040284,│ │                       │   │   151646:                                    │ │
+1738630040284,"│ │                       AddedToken(""<｜begin▁of▁sentence｜>"",              │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=True),                   │ │"
+1738630040284,"│ │                       │   │   151647: AddedToken(""<|EOT|>"",              │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=False),                  │ │"
+1738630040284,"│ │                       │   │   151648: AddedToken(""<think>"",              │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=False),                  │ │"
+1738630040284,"│ │                       │   │   151649: AddedToken(""</think>"",             │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=False),                  │ │"
+1738630040284,"│ │                       │   │   151650: AddedToken(""<|quad_start|>"",       │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=True),                   │ │"
+1738630040284,"│ │                       │   │   151651: AddedToken(""<|quad_end|>"",         │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=True),                   │ │"
+1738630040284,"│ │                       │   │   151652: AddedToken(""<|vision_start|>"",     │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=True),                   │ │"
+1738630040284,"│ │                       │   │   151653: AddedToken(""<|vision_end|>"",       │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
+1738630040284,"│ │                       normalized=False, special=True),                   │ │"
+1738630040284,"│ │                       │   │   151654: AddedToken(""<|vision_pad|>"",       │ │"
+1738630040284,"│ │                       rstrip=False, lstrip=False, single_word=False,     │ │"
